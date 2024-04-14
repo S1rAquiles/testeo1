@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Productos</title>
+  <link rel="stylesheet" type="text/css" href="/css/producto.css">
+  
+</head>
+<body>
+  <h1>Productos <%=modelo.length%></h1>
+  <div class="table">
+    <table border>
+          <tr>
+            <th>ID</th>
+            <th>link</th>
+            <th>destacado</th>
+
+          </tr>
+          <%for(const imagenes of modelo){%>
+            <tr>
+              <td><%=imagenes.id%></td>
+              <td><%=imagenes.url%></td>
+              <td><%=imagenes.destacado%></td>
+            </tr>
+           <%}%>
+        </table>
+       
+  </div>
+  <a id='botonProductos' href="/">Volver</a>
+  <a href='/categorias' id='botonProductos'>Categorias</a>
+</body>
+</html>
